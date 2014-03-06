@@ -7,6 +7,6 @@ My system configs was:
 
  - Anaconda 1.6.1 on MaxOSX
  - `pip install theano`
-`- `source .env` may not be required on your machine. Change the path value appropriately beforehand.
+ - `source .env` may not be required on your machine. Change the path value appropriately beforehand.
 
 
