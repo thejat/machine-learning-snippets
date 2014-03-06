@@ -1,4 +1,4 @@
-Following the Theano basic tutorial using an ipython notebook.
+Following the Theano basic tutorial using ipython notebooks.
 
 Tutorial url: http://deeplearning.net/software/theano/tutorial/
 
