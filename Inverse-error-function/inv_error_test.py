@@ -99,16 +99,16 @@ def ltqnorm( p ):
 #     print 'erf_horner(inv_erf('+str(e)+')):  ' + str(erf_horner(ltqnorm(e)))
 
 
-import numpy as np
+import timeit
+import numpy, scipy
 from scipy.special import erf as erf_scipy
-
 def vectorized(n):
-    x = np.random.randn(n)
+    x = numpy.random.randn(n)
     return erf_scipy(x)
 
 def loopstyle(n):
-    x = np.random.randn(n)
-    return [erf_scipy(v) for v in x]
+    x = numpy.random.randn(n)
+    return [scipy.special.erf(v) for v in x]
 
-timeit vectorized(10e5)
-timeit loopstyle(10e5)
+print timeit.timeit("__main__.vectorized(10e3)",setup="import numpy, scipy, __main__")
+print timeit.timeit("loopstyle(10e3)",setup="import numpy, scipy")
