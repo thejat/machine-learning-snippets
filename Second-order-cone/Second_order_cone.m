@@ -64,3 +64,40 @@ if(~isempty(inpts))
        'FaceColor','cyan');
     axis([-xu xu -xu xu -xu xu])
 end
+
+
+%% Second order cones in 3D: As two constraints
+clc;clear all;close all;
+inpts   = [];
+outpts  = [];
+xu      =  3;
+divb    = 10;
+
+constraint1 = @(A,i,j,k) (A*[i;j]).^2 <= k^2;
+
+A = randn(2,2);
+for i=-xu:xu/divb:xu
+    for j=-xu:xu/divb:xu
+        for k=-xu:xu/divb:xu
+            if (constraint1(A,i,j,k))
+                inpts = [inpts;i,j,k];
+            else
+                outpts = [outpts;i,j,k];
+            end
+        end
+    end
+end
+if(~isempty(inpts))
+    figure;
+    hullcoord = repmat(1:length(inpts),3,1)';
+    scatter3(inpts(hullcoord(:,1),1),inpts(hullcoord(:,2),2),inpts(hullcoord(:,3),3));
+    axis([-xu xu -xu xu -xu xu])
+end
+% if(~isempty(inpts))
+%     figure;
+%     DT = delaunayTriangulation(inpts);
+%     [K,v] = convexHull(DT);
+%     trisurf(K,DT.Points(:,1),DT.Points(:,2),DT.Points(:,3),...
+%        'FaceColor','cyan');
+%     axis([-xu xu -xu xu -xu xu])
+% end
