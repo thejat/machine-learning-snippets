@@ -27,6 +27,9 @@
 
 </style>
 <body>
+<p>
+A Barplot of different ethnic representations at SIAM Data Mining Conference 2014. The participants were manually labeled (thus noisy). The three group labels used were: Asian (excluding people of Indian origin), Indian and Other (Europe, US etc).
+</p>  
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -55,7 +58,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data.tsv", type, function(error, data) {
+d3.tsv("counts.tsv", type, function(error, data) {
   x.domain(data.map(function(d) { return d.letter; }));
   y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
 
