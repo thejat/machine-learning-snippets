@@ -1,3 +1,6 @@
+From https://github.com/echen/restricted-boltzmann-machines and http://blog.echen.me/2011/07/18/introduction-to-restricted-boltzmann-machines/
+
+
 # How to Use
 
 First, initialize an RBM with the desired number of visible and hidden units.
