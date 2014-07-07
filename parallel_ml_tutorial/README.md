@@ -1,3 +1,8 @@
+###This is a one time fork of the repo at https://github.com/ogrisel/parallel_ml_tutorial merged with this repo for tracking commit histories at one place. All credits to the author at that repo and all errors are mine.
+
+------
+
+
 # Parallel Machine Learning with scikit-learn and IPython
 
 
