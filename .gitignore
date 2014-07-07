@@ -1,3 +1,16 @@
+<<<<<<< HEAD
 .RData
 .Rhistory
 .ipynb_*
+=======
+.DS_Store
+*.mmap
+joblib
+*.pyc
+*.pkl
+*.npy
+*.zip
+
+datasets
+.ipynb_checkpoints
+>>>>>>> 17f478fbfeee1d6db9d88ddb41317413505322f4
